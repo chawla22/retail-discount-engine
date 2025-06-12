@@ -15,9 +15,15 @@ console.log("Retail Discount Engine  - Challenge 4");
 var products = [
     { name: "Laptop", category: "Electronics", price: 1200, inventory: 10 },
     { name: "Smartphone", category: "Electronics", price: 800, inventory: 20 },
-    { name: "Jeans", category: "Clothing", price: 50, inventory: 30 },
-    { name: "Sneakers", category: "Footwear", price: 100, inventory: 15 },
-    { name: "Watch", category: "Accessories", price: 200, inventory: 5 }
+    { name: "Jeans", category: "Apparel", price: 50, inventory: 30 },
+    { name: "Bread", category: "Groceries", price: 5, inventory: 15 },
+    { name: "Mop", category: "Household", price: 20, inventory: 5 }
 ];
 
 console.log("Products:", products);
+
+// Write a for...of loop that cycles through each product and applies a dynamic discount based on category. Use a switch statement for:
+// o	"electronics": 20% off
+// o	"apparel": 15% off
+// o	"groceries" and "household": 10% off
+// o	default: No discount
