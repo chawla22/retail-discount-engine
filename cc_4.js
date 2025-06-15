@@ -22,8 +22,36 @@ var products = [
 
 console.log("Products:", products);
 
-// Write a for...of loop that cycles through each product and applies a dynamic discount based on category. Use a switch statement for:
+// Write a for...of loop that cycles through each product and applies a dynamic discount based on category. 
+// Use a switch statement for:
 // o	"electronics": 20% off
 // o	"apparel": 15% off
 // o	"groceries" and "household": 10% off
 // o	default: No discount
+
+for (let product of products) {
+    let discount = 0;
+
+    switch (product.category.toLowerCase()) {
+        case "electronics":
+            discount = 0.20; // 20% off
+            break;
+        case "apparel":
+            discount = 0.15; // 15% off
+            break;
+        case "groceries":
+        case "household":
+            discount = 0.10; // 10% off
+            break;
+        default:
+            discount = 0; // No discount
+    }
+
+    // Calculate the discounted price
+    let discountedPrice = product.price * (1 - discount);
+    console.log(`Product: ${product.name}, Original Price: $${product.price}, Discounted Price: $${discountedPrice.toFixed(2)}`);
+
+
+
+
+}
